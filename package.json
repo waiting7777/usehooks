@@ -1,0 +1,34 @@
+{
+  "name": "@waiting7777/usehooks",
+  "version": "1.0.1",
+  "description": "Collection of React Hooks",
+  "main": "lib/index.js",
+  "module": "esm/index.js",
+  "sideEffects": false,
+  "files": [
+    "lib/",
+    "esm/"
+  ],
+  "types": "lib/index.d.ts",
+  "typings": "lib/index.d.ts",
+  "scripts": {
+    "build:cjs": "tsc",
+    "build:es": "tsc -m esNext --outDir esm",
+    "build": "yarn build:cjs && yarn build:es"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/waiting7777/usehooks.git"
+  },
+  "keywords": [],
+  "author": "waiting7777",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/waiting7777/usehooks/issues"
+  },
+  "homepage": "https://github.com/waiting7777/usehooks#readme",
+  "dependencies": {
+    "react": "^17.0.2",
+    "tslib": "^2.3.1"
+  }
+}
