@@ -1,6 +1,6 @@
 {
   "name": "@waiting7777/usehooks",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Collection of React Hooks",
   "main": "lib/index.js",
   "module": "esm/index.js",
@@ -14,7 +14,9 @@
   "scripts": {
     "build:cjs": "tsc",
     "build:es": "tsc -m esNext --outDir esm",
-    "build": "yarn build:cjs && yarn build:es"
+    "build": "yarn build:cjs && yarn build:es",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "repository": {
     "type": "git",
@@ -28,7 +30,16 @@
   },
   "homepage": "https://github.com/waiting7777/usehooks#readme",
   "dependencies": {
-    "react": "^17.0.2",
     "tslib": "^2.3.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.5",
+    "@storybook/addon-actions": "^6.4.9",
+    "@storybook/addon-essentials": "^6.4.9",
+    "@storybook/addon-links": "^6.4.9",
+    "@storybook/react": "^6.4.9",
+    "babel-loader": "^8.2.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   }
 }
