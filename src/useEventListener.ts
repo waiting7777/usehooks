@@ -2,10 +2,10 @@ import { RefObject, useEffect, useRef } from "react"
 
 function useEventListener<T extends HTMLElement = HTMLDivElement>(
   eventName: keyof WindowEventMap | string, // string to allow custom event
-  handler: (event: Event) => void,
+  handler: (event: any) => void,
   element?: RefObject<T>,
 ) {
-  const savedHandler = useRef<(event: Event) => void>()
+  const savedHandler = useRef<(event: any) => void>()
 
   useEffect(() => {
     // Define the listening target
@@ -20,7 +20,7 @@ function useEventListener<T extends HTMLElement = HTMLDivElement>(
     }
 
     // Create event listener that calls handler function stored in ref
-    const eventListener = (event: Event) => {
+    const eventListener = (event: any) => {
       // eslint-disable-next-line no-extra-boolean-cast
       if (!!savedHandler?.current) {
         savedHandler.current(event)
